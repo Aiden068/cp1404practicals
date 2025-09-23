@@ -17,7 +17,7 @@ def parameter():
 
 
 
-def random_number():
+def main():
     score = float(input("Enter score: "))
     if score < 0 or score > 100:
         print("Invalid score")
@@ -39,4 +39,4 @@ def random_number():
         print("Bad")
 
 
-random_number()
+main()
