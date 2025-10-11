@@ -38,22 +38,14 @@ almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
 numbers = [int(s) for s in almost_numbers]
 print(numbers)
 
-# FINISH LATER: list comprehension to create a list of only the numbers that are
+# list comprehension to create a list of only the numbers that are
 # greater than 9 from the numbers (not strings) you just created
-for numbers in numbers:
-    if numbers > 9:
-        print(numbers)
+almost_numbers = (int(numbers) for numbers in almost_numbers)
+greater_than_9 = [numbers for numbers in almost_numbers if numbers > 9]
+print(greater_than_9)
 
-# FINISH LATER: (more advanced) use a list comprehension and the join string method
+# (more advanced) use a list comprehension and the join string method
 # to create a string (not list) of the last names for those full names longer than 11 characters
 # the result should be: 'Harlem, Hendrix, Lovelace'
-
-# i = 0
-print("test break")
-long_names = []
-for name in full_names:
-    long_names = len(full_names[full_names.index(name)])
-    if long_names > 11:
-        print(long_names)
-
-    print(long_names)
+long_names = ", ".join(last_name.split()[1] for last_name in full_names if len(last_name) > 11)
+print(long_names)
