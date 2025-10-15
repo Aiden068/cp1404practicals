@@ -7,17 +7,7 @@ for name, code in colours:
 
 user_colour_choice = input("Enter a colour name from the colours above: ").capitalize()
 while user_colour_choice != "":
-    while user_colour_choice not in name:
-        print("test1")
-        user_colour_choice = input("Enter a valid colour: ").capitalize()
-
     for name, code in colours:
-
             if user_colour_choice in name:
                 print(f"The colour code of {user_colour_choice} is {code}")
                 user_colour_choice = input("Enter a valid colour: ").capitalize()
-
-
-
-
-print("test")
