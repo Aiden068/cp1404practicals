@@ -8,3 +8,4 @@ for word in words:
 
 for word in sorted(word_occurrence):
     print(f"{word:{max(len(word) for word in words)}} : {word_occurrence[word]}")
+
